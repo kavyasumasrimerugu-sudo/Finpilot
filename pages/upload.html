@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload Documents</title>
+
+    <link rel="stylesheet" href="../style.css">
+
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+
+        <div class="logo">
+            <i class="fa-solid fa-chart-column"></i>
+            <span>FinPilot AI</span>
+        </div>
+
+        <ul class="menu">
+
+            <li><a href="dashboard.html"><i class="fa-solid fa-house"></i> Dashboard</a></li>
+
+            <li><a href="upload.html" class="active"><i class="fa-solid fa-file-arrow-up"></i> Documents</a></li>
+
+            <li><a href="profile.html"><i class="fa-solid fa-user"></i> Financial Profile</a></li>
+
+            <li><a href="copilot.html"><i class="fa-solid fa-robot"></i> AI Copilot</a></li>
+
+            <li><a href="processing.html"><i class="fa-solid fa-wallet"></i> Salary Planner</a></li>
+
+            <li><a href="analytics.html"><i class="fa-solid fa-chart-pie"></i> Analytics</a></li>
+
+            <li><a href="result.html"><i class="fa-solid fa-heart"></i> Financial Health</a></li>
+
+            <li><a href="../index.html"><i class="fa-solid fa-right-from-bracket"></i> Logout</a></li>
+
+        </ul>
+
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main">
+
+        <div class="header">
+
+            <div>
+
+                <h1>📂 Upload Documents</h1>
+
+                <p>Upload your financial documents securely.</p>
+
+            </div>
+
+            <div class="profile">
+
+                <i class="fa-solid fa-bell notification-bell"></i>
+
+                <div class="avatar">A</div>
+
+                <div>
+
+                    <strong>Admin</strong><br>
+
+                    <small>Premium User</small>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- Upload Box -->
+
+        <div class="upload-box">
+
+            <i class="fa-solid fa-cloud-arrow-up" style="font-size:60px;color:#4F46E5;"></i>
+
+            <h2 style="margin-top:20px;">Drag & Drop Files</h2>
+
+            <p style="margin:15px 0;color:gray;">
+                Supported formats: PDF, JPG, PNG
+            </p>
+
+            <input type="file">
+
+            <br><br>
+
+            <button class="btn">
+                Upload Document
+            </button>
+
+        </div>
+
+        <br>
+
+        <!-- Uploaded Documents -->
+
+        <div class="section">
+
+            <h2>Uploaded Documents</h2>
+
+            <br>
+
+            <table>
+
+                <tr>
+
+                    <th>Document</th>
+
+                    <th>Type</th>
+
+                    <th>Status</th>
+
+                </tr>
+
+                <tr>
+
+                    <td>Salary Slip.pdf</td>
+
+                    <td>Salary Slip</td>
+
+                    <td class="green">Verified</td>
+
+                </tr>
+
+                <tr>
+
+                    <td>Bank Statement.pdf</td>
+
+                    <td>Bank Statement</td>
+
+                    <td class="green">Verified</td>
+
+                </tr>
+
+                <tr>
+
+                    <td>PAN Card.pdf</td>
+
+                    <td>Identity</td>
+
+                    <td class="blue">Pending</td>
+
+                </tr>
+
+                <tr>
+
+                    <td>Aadhaar.pdf</td>
+
+                    <td>Identity</td>
+
+                    <td class="green">Verified</td>
+
+                </tr>
+
+            </table>
+
+        </div>
+
+    </main>
+
+</div>
+
+</body>
+</html>

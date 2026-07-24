@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Spending Analytics</title>
+
+<link rel="stylesheet" href="../style.css">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+</head>
+
+<body>
+
+<div class="container">
+
+<aside class="sidebar">
+
+<div class="logo">
+<i class="fa-solid fa-chart-column"></i>
+<span>FinPilot AI</span>
+</div>
+
+<ul class="menu">
+
+<li><a href="dashboard.html"><i class="fa-solid fa-house"></i><span>Dashboard</span></a></li>
+
+<li><a href="upload.html"><i class="fa-solid fa-file-arrow-up"></i><span>Documents</span></a></li>
+
+<li><a href="profile.html"><i class="fa-solid fa-user"></i><span>Financial Profile</span></a></li>
+
+<li><a href="copilot.html"><i class="fa-solid fa-robot"></i><span>AI Copilot</span></a></li>
+
+<li><a href="processing.html"><i class="fa-solid fa-wallet"></i><span>Salary Planner</span></a></li>
+
+<li><a href="analytics.html" class="active"><i class="fa-solid fa-chart-pie"></i><span>Analytics</span></a></li>
+
+<li><a href="result.html"><i class="fa-solid fa-heart"></i><span>Financial Health</span></a></li>
+
+</ul>
+
+</aside>
+
+<main class="main">
+
+<div class="header">
+
+<div>
+
+<h1>📊 Spending Analytics</h1>
+
+<p>Track your financial performance and spending trends.</p>
+
+</div>
+
+<div class="profile">
+
+<div class="avatar">A</div>
+
+<div>
+
+<strong>Admin</strong>
+
+<br>
+
+<small>Premium User</small>
+
+</div>
+
+</div>
+
+</div>
+
+<div style="display:grid;grid-template-columns:2fr 1fr;gap:20px;">
+
+<div class="section">
+
+<h2>Monthly Income vs Expense</h2>
+
+<br>
+
+<canvas id="incomeExpenseChart"></canvas>
+
+</div>
+
+<div class="section">
+
+<h2>Expense Breakdown</h2>
+
+<br>
+
+<canvas id="expensePieChart"></canvas>
+
+</div>
+
+</div>
+
+<div class="cards" style="margin-top:25px;">
+
+<div class="card">
+
+<h3>Total Income</h3>
+
+<h2 class="green">₹80,000</h2>
+
+</div>
+
+<div class="card">
+
+<h3>Total Expenses</h3>
+
+<h2 class="red">₹45,000</h2>
+
+</div>
+
+<div class="card">
+
+<h3>Monthly Savings</h3>
+
+<h2 class="blue">₹35,000</h2>
+
+</div>
+
+<div class="card">
+
+<h3>Saving Rate</h3>
+
+<h2>44%</h2>
+
+</div>
+
+<!-- Savings Progress -->
+
+<div class="section" style="margin-top:25px;">
+
+<h2>💰 Savings Progress</h2>
+
+<br>
+
+<p>Current Savings Goal: <b>₹50,000</b></p>
+
+<div style="width:100%;background:#e5e7eb;height:18px;border-radius:10px;margin-top:15px;">
+
+<div style="width:70%;height:18px;background:#4F46E5;border-radius:10px;"></div>
+
+</div>
+
+<p style="margin-top:10px;">70% Completed</p>
+
+</div>
+
+<!-- AI Insights -->
+
+<div class="section">
+
+<h2>💡 AI Financial Insights</h2>
+
+<br>
+
+<div class="cards">
+
+<div class="card">
+
+<h3>Expense Alert</h3>
+
+<p>Your food expenses increased by 12% this month.</p>
+
+</div>
+
+<div class="card">
+
+<h3>Investment Tip</h3>
+
+<p>Invest ₹5,000/month in a SIP to achieve long-term growth.</p>
+
+</div>
+
+<div class="card">
+
+<h3>Budget Status</h3>
+
+<p class="green">You're staying within your monthly budget.</p>
+
+</div>
+
+<div class="card">
+
+<h3>Loan Readiness</h3>
+
+<p class="blue">Your profile is suitable for medium-sized loans.</p>
+
+</div>
+
+</div>
+
+</div>
+
+</main>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<script>
+
+const incomeExpenseChart = document.getElementById('incomeExpenseChart');
+
+new Chart(incomeExpenseChart,{
+type:'bar',
+data:{
+labels:['Jan','Feb','Mar','Apr','May','Jun'],
+datasets:[
+{
+label:'Income',
+data:[65000,70000,75000,80000,82000,85000],
+backgroundColor:'#4F46E5'
+},
+{
+label:'Expenses',
+data:[35000,42000,38000,45000,43000,46000],
+backgroundColor:'#22C55E'
+}
+]
+},
+options:{
+responsive:true
+}
+});
+
+const expensePieChart = document.getElementById('expensePieChart');
+
+new Chart(expensePieChart,{
+type:'pie',
+data:{
+labels:['Food','Travel','Shopping','Bills'],
+datasets:[{
+data:[35,20,25,20],
+backgroundColor:[
+'#4F46E5',
+'#22C55E',
+'#F59E0B',
+'#EF4444'
+]
+}]
+}
+});
+
+</script>
+
+</body>
+</html>

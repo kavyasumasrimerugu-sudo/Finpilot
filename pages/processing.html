@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Document Processing</title>
+
+<link rel="stylesheet" href="../style.css">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+</head>
+
+<body>
+
+<div class="container">
+
+<!-- Sidebar -->
+
+<aside class="sidebar">
+
+<div class="logo">
+<i class="fa-solid fa-chart-column"></i>
+<span>FinPilot AI</span>
+</div>
+
+<ul class="menu">
+
+<li><a href="dashboard.html"><i class="fa-solid fa-house"></i><span>Dashboard</span></a></li>
+
+<li><a href="upload.html"><i class="fa-solid fa-file-arrow-up"></i><span>Documents</span></a></li>
+
+<li><a href="profile.html"><i class="fa-solid fa-user"></i><span>Financial Profile</span></a></li>
+
+<li><a href="copilot.html"><i class="fa-solid fa-robot"></i><span>AI Copilot</span></a></li>
+
+<li><a href="processing.html" class="active"><i class="fa-solid fa-wallet"></i><span>Processing</span></a></li>
+
+<li><a href="analytics.html"><i class="fa-solid fa-chart-pie"></i><span>Analytics</span></a></li>
+
+<li><a href="result.html"><i class="fa-solid fa-heart"></i><span>Financial Health</span></a></li>
+
+</ul>
+
+</aside>
+
+<!-- Main -->
+
+<main class="main">
+
+<div class="header">
+
+<div>
+
+<h1>📄 Processing Documents</h1>
+
+<p>AI is analyzing your uploaded financial documents.</p>
+
+</div>
+
+<div class="profile">
+
+<div class="avatar">A</div>
+
+<div>
+
+<strong>Admin</strong><br>
+
+<small>Premium User</small>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- Processing Card -->
+
+<div class="section" style="text-align:center;">
+
+<i class="fa-solid fa-gear fa-spin"
+style="font-size:70px;color:#4F46E5;"></i>
+
+<h2 style="margin-top:20px;">
+Analyzing Documents...
+</h2>
+
+<p style="margin-top:10px;color:#6b7280;">
+OCR Extraction • AI Verification • Financial Analysis
+</p>
+
+<br>
+
+<div class="progress-bar">
+
+<div class="progress-fill" id="progressFill"></div>
+
+</div>
+
+<p id="progressText" style="margin-top:15px;">
+70% Completed
+</p>
+
+</div>
+
+<!-- Processing Steps -->
+
+<div class="cards">
+
+<div class="card">
+
+<h3>📄 OCR Scan</h3>
+
+<p class="green">Completed</p>
+
+</div>
+
+<div class="card">
+
+<h3>✅ Document Verification</h3>
+
+<p class="green">Completed</p>
+
+</div>
+
+<div class="card">
+
+<h3>🤖 AI Analysis</h3>
+
+<p class="blue">In Progress</p>
+
+</div>
+
+<div class="card">
+
+<h3>📊 Report Generation</h3>
+
+<p>Pending</p>
+
+</div>
+
+</div>
+
+<!-- Timeline -->
+
+<div class="section">
+
+<h2>Processing Timeline</h2>
+
+<br>
+
+<table>
+
+<tr>
+<th>Task</th>
+<th>Status</th>
+</tr>
+
+<tr>
+<td>Salary Slip Uploaded</td>
+<td class="green">✔ Completed</td>
+</tr>
+
+<tr>
+<td>OCR Data Extraction</td>
+<td class="green">✔ Completed</td>
+</tr>
+
+<tr>
+<td>Expense Categorization</td>
+<td class="green">✔ Completed</td>
+</tr>
+
+<tr>
+<td>Financial Risk Analysis</td>
+<td class="blue">Processing...</td>
+</tr>
+
+<tr>
+<td>Final Report</td>
+<td>Pending</td>
+</tr>
+
+</table>
+
+</div>
+
+</main>
+
+</div>
+
+<script>
+
+let progress = 70;
+
+let fill = document.getElementById("progressFill");
+
+let text = document.getElementById("progressText");
+
+setInterval(function(){
+
+if(progress < 100){
+
+progress++;
+
+fill.style.width = progress + "%";
+
+text.innerHTML = progress + "% Completed";
+
+}
+
+},120);
+
+</script>
+
+</body>
+
+</html>
